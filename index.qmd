@@ -24,7 +24,7 @@ and these practices can be HARD.
 with Kubernetes-based + models. after a while where i STRUGGLED with the tools at hand, i felt that, as a data scientist, the tools were not built for me. they were built for a software engineer that had pretty deep knowledge of infrastructure--and i needed to productionalize models, but i didn't want to have to be a cloud architect as well a data scientist.
 :::
 
-#
+# {background-iframe="logo-fall/index.html"}
 
 ![](https://github.com/isabelizimm/pydata-nyc2022/blob/main/images/vetiverhex.png?raw=true){fig-align="center"}
 
