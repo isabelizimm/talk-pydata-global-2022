@@ -167,18 +167,18 @@ you start to realize that these practices are not always enough!
 ![](https://github.com/isabelizimm/pydata-nyc2022/blob/main/images/ml_ops_cycle.png?raw=true)
 
 
-## what are all the pieces needed for mlops?
-
-![](http://mattturck.com/wp-content/uploads/2021/09/Data-and-AI-Landscape-2021-Small.jpg){fig-align="center"}
-
-::: {.notes}
-Each open source project falls into one (or sometimes multiple) different categories to fulfill these different tasks: all-in-one, data pipeline, infrastructure, modeling and training, monitoring, and serving
+## what are some pieces used in mlops?
 
 - orchestration
 - experiment tracking
 - model versioning
-- model services
-- model performance monitoring
+- model serving
+- model monitoring
+
+::: {.notes}
+Each open source project falls into one (or sometimes multiple) different categories to fulfill these different tasks: all-in-one, data pipeline, infrastructure, modeling and training, monitoring, and serving
+
+
 :::
 
 # versioning
