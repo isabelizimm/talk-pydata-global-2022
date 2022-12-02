@@ -382,9 +382,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -392,7 +389,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Practical MLOps for better models</h1>
-  <p class="subtitle">PyData NYC 2022</p>
+  <p class="subtitle">PyData Global 2022</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -403,37 +400,15 @@ Isabel Zimmerman, Posit PBC
 </div>
 
 </section>
-<section id="mlops-is" class="title-slide slide level1 center">
-<h1>MLOps is…</h1>
-<div class="fragment">
-<p>a set of <u>practices</u> to <em>deploy</em> and <em>maintain</em> machine learning models in production <strong>reliably</strong> and <strong>efficiently</strong></p>
-</div>
-<div class="fragment">
-<p>and these practices can be HARD.</p>
-<aside class="notes">
-<p>with Kubernetes-based + models. after a while where i STRUGGLED with the tools at hand, i felt that, as a data scientist, the tools were not built for me. they were built for a software engineer that had pretty deep knowledge of infrastructure–and i needed to productionalize models, but i didn’t want to have to be a cloud architect as well a data scientist.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-
 <section id="section" class="title-slide slide level1 center">
 <h1></h1>
 
-<img data-src="https://github.com/isabelizimm/pydata-nyc2022/blob/main/images/vetiverhex.png?raw=true" class="r-stretch quarto-figure-center"><aside class="notes">
-<ul>
-<li><p>so i changed career paths to build new tools designed specifically for data scientists to deploy models</p></li>
-<li><p>vetiver, which is an mlops framework to help data scientists in R and Python</p></li>
-</ul>
+<img data-src="https://github.com/isabelizimm/crunch-2022/blob/main/images/toast.jpg?raw=true" class="r-stretch"><aside class="notes">
+<p>hi im isabel</p>
+<p>started my career as a software engineer/data scientist, working on operationalizing models, mostly in kubernetes environments. if you know anything about k8s, they can be a little frustrating. so, giving my brain a break, i started training my little dog named toast to do tricks.</p>
+<p>when first taught my dog to sit, stood in front of him, had him sit. give him a treat. and of course, when i first took him out for a walk, i wanted to practice, so as he was walking right next to me, i looked down from my shoulder and told him to sit. and he did NOT sit. he acted like he had never</p>
+<p>now, as a data scientist, i realized i had not trained my dog very well. he only knew sit when i was standing in front of him. but all the information i had, i had used correctly. he was sitting really well inside my home!</p>
+<p>toast taught me a hard lesson. even if youre training for the right outcome, sitting, being out of my cozy local home environment brought a new set of challenges, and he behaved differently. i realized i needed new tools to expand my mindset.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -449,145 +424,80 @@ Isabel Zimmerman, Posit PBC
 
 <section id="section-1" class="title-slide slide level1 center">
 <h1></h1>
+<div class="r-fit-text">
+<p>if you develop models…</p>
+<p>you can operationalize them</p>
+</div>
+<aside class="notes">
+<p>but, this is not a dog training conference–so, i’ll tell you this.</p>
+<p>the “real world” value of models often times comes from integrating</p>
+<p>my advice for you, is to bring your models outside!!</p>
+<p>you can learn to operationalize models using a set of practices called MLOps—</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="mlops-is" class="title-slide slide level1 center">
+<h1>MLOps is…</h1>
+<div class="fragment">
+<p>a set of <u>practices</u> to <em>deploy</em> and <em>maintain</em> machine learning models in production <strong>reliably</strong> and <strong>efficiently</strong></p>
+</div>
+<div class="fragment">
+<p>and these practices can be HARD.</p>
+<aside class="notes">
+<p>these practices are to …</p>
+<p>with Kubernetes-based + models. after a while where i STRUGGLED with the tools at hand, i felt that, as a data scientist, i needed to productionalize models, but i didn’t want to have to be a cloud architect as well a data scientist.</p>
+<p>and while i don’t think we should be oblivious to everything in the dev ops world, i do think that there is space for tools to help data scientists more effectively communicate with their IT or devops teams, while still feeling ergonomic for data scientists.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+
+<section id="section-2" class="title-slide slide level1 center" data-background-iframe="logo-fall/index.html">
+<h1></h1>
+
+<img data-src="https://github.com/isabelizimm/pydata-nyc2022/blob/main/images/vetiverhex.png?raw=true" class="r-stretch quarto-figure-center"><aside class="notes">
+<ul>
+<li>so i changed career paths to build new tools to make mlops feel like an extension of a data scientist’s current workflow. and this tool, is named vetiver.</li>
+</ul>
+<p>i do work for posit, which you might have heard of from hadley’s keynote yesterday– this company was formerly known as RStudio, so it may come as no surprise that vetiver is a python package, but also an R package as well.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="section-3" class="title-slide slide level1 center">
+<h1></h1>
 
 <img data-src="https://github.com/isabelizimm/pydata-nyc2022/blob/main/images/ml_ops_cycle_no_ops.png?raw=true" class="r-stretch"><aside class="notes">
-<p>put my student hat back on– when you start learning about data science, you see an image that looks something like this: you learn about tools such as –</p>
+<p>when you start learning about data science, you see an image that looks something like this: you learn about tools such as –</p>
 <p>and so when you write data science code in Python using the packages and BEST practices you’ve learned, it goes something like this:</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-
-<section id="section-2" class="title-slide slide level1 center">
-<h1></h1>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3"></a>np.random.RandomState(<span class="dv">500</span>)</span>
-<span id="cb1-4"><a href="#cb1-4"></a>raw <span class="op">=</span> pd.read_csv(<span class="st">'https://bit.ly/3sWty5A'</span>)</span>
-<span id="cb1-5"><a href="#cb1-5"></a>df <span class="op">=</span> raw[[<span class="st">"like_count"</span>, <span class="st">"funny"</span>, <span class="st">"show_product_quickly"</span>, <span class="op">\</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>    <span class="st">"celebrity"</span>, <span class="st">"danger"</span>, <span class="st">"animals"</span>]].dropna()</span>
-<span id="cb1-7"><a href="#cb1-7"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-<aside class="notes">
-<p>set seed for reproducibility</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-
-<section id="section-2-output" class="title-slide slide level1 output-location-slide center"><h1></h1><div class="cell output-location-slide" data-execution_count="1">
-<div class="cell-output cell-output-display" data-execution_count="1">
-
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>like_count</th>
-      <th>funny</th>
-      <th>show_product_quickly</th>
-      <th>celebrity</th>
-      <th>danger</th>
-      <th>animals</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1233.0</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>485.0</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>129.0</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2.0</td>
-      <td>False</td>
-      <td>True</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>20.0</td>
-      <td>True</td>
-      <td>True</td>
-      <td>False</td>
-      <td>True</td>
-      <td>True</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-</div></section><section id="section-3" class="title-slide slide level1 center">
-<h1></h1>
-<div class="sourceCode" id="cb2" data-code-line-numbers="12-16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-3"><a href="#cb2-3"></a>np.random.RandomState(<span class="dv">500</span>)</span>
-<span id="cb2-4"><a href="#cb2-4"></a>raw <span class="op">=</span> pd.read_csv(<span class="st">'https://bit.ly/3sWty5A'</span>)</span>
-<span id="cb2-5"><a href="#cb2-5"></a>df <span class="op">=</span> raw[[<span class="st">"like_count"</span>, <span class="st">"funny"</span>, <span class="st">"show_product_quickly"</span>, <span class="op">\</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>    <span class="st">"celebrity"</span>, <span class="st">"danger"</span>, <span class="st">"animals"</span>]].dropna()</span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="im">from</span> sklearn <span class="im">import</span> model_selection, preprocessing, ensemble</span>
-<span id="cb2-8"><a href="#cb2-8"></a>X_train, X_test, y_train, y_test <span class="op">=</span> model_selection.train_test_split(</span>
-<span id="cb2-9"><a href="#cb2-9"></a>    df.drop(columns <span class="op">=</span> [<span class="st">'like_count'</span>]),</span>
-<span id="cb2-10"><a href="#cb2-10"></a>    df[<span class="st">'like_count'</span>],</span>
-<span id="cb2-11"><a href="#cb2-11"></a>    test_size<span class="op">=</span><span class="fl">0.2</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<aside class="notes">
-<p>split into training and test sets</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -603,21 +513,80 @@ Isabel Zimmerman, Posit PBC
 
 <section id="section-4" class="title-slide slide level1 center">
 <h1></h1>
+<div class="sourceCode" id="cb1" data-code-line-numbers="4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a>np.random.RandomState(<span class="dv">500</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a>raw <span class="op">=</span> pd.read_csv(<span class="st">'https://bit.ly/3sWty5A'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6"></a>df <span class="op">=</span> raw[[<span class="st">"like_count"</span>, <span class="st">"funny"</span>, <span class="st">"show_product_quickly"</span>, <span class="op">\</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="st">"celebrity"</span>, <span class="st">"danger"</span>, <span class="st">"animals"</span>]].dropna()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<p>set seed for reproducibility</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="section-5" class="title-slide slide level1 center">
+<h1></h1>
+<div class="sourceCode" id="cb2" data-code-line-numbers="12-16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a>np.random.RandomState(<span class="dv">500</span>)</span>
+<span id="cb2-5"><a href="#cb2-5"></a>raw <span class="op">=</span> pd.read_csv(<span class="st">'https://bit.ly/3sWty5A'</span>)</span>
+<span id="cb2-6"><a href="#cb2-6"></a>df <span class="op">=</span> raw[[<span class="st">"like_count"</span>, <span class="st">"funny"</span>, <span class="st">"show_product_quickly"</span>, <span class="op">\</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>    <span class="st">"celebrity"</span>, <span class="st">"danger"</span>, <span class="st">"animals"</span>]].dropna()</span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="im">from</span> sklearn <span class="im">import</span> model_selection, preprocessing, ensemble</span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a>X_train, X_test, y_train, y_test <span class="op">=</span> model_selection.train_test_split(</span>
+<span id="cb2-12"><a href="#cb2-12"></a>    df.drop(columns <span class="op">=</span> [<span class="st">'like_count'</span>]),</span>
+<span id="cb2-13"><a href="#cb2-13"></a>    df[<span class="st">'like_count'</span>],</span>
+<span id="cb2-14"><a href="#cb2-14"></a>    test_size<span class="op">=</span><span class="fl">0.2</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<p>split into training and test sets</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="section-6" class="title-slide slide level1 center">
+<h1></h1>
 <div class="sourceCode" id="cb3" data-code-line-numbers="16-18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-3"><a href="#cb3-3"></a>np.random.RandomState(<span class="dv">500</span>)</span>
-<span id="cb3-4"><a href="#cb3-4"></a>raw <span class="op">=</span> pd.read_csv(<span class="st">'https://bit.ly/3sWty5A'</span>)</span>
-<span id="cb3-5"><a href="#cb3-5"></a>df <span class="op">=</span> raw[[<span class="st">"like_count"</span>, <span class="st">"funny"</span>, <span class="st">"show_product_quickly"</span>, <span class="op">\</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a>    <span class="st">"celebrity"</span>, <span class="st">"danger"</span>, <span class="st">"animals"</span>]].dropna()</span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="im">from</span> sklearn <span class="im">import</span> model_selection, preprocessing, ensemble</span>
-<span id="cb3-8"><a href="#cb3-8"></a>X_train, X_test, y_train, y_test <span class="op">=</span> model_selection.train_test_split(</span>
-<span id="cb3-9"><a href="#cb3-9"></a>    df.drop(columns <span class="op">=</span> [<span class="st">'like_count'</span>]),</span>
-<span id="cb3-10"><a href="#cb3-10"></a>    df[<span class="st">'like_count'</span>],</span>
-<span id="cb3-11"><a href="#cb3-11"></a>    test_size<span class="op">=</span><span class="fl">0.2</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a>)</span>
-<span id="cb3-13"><a href="#cb3-13"></a>oe <span class="op">=</span> preprocessing.OrdinalEncoder().fit(X_train)</span>
-<span id="cb3-14"><a href="#cb3-14"></a>rf <span class="op">=</span> ensemble.RandomForestRegressor().fit(oe.transform(X_train), y_train)</span>
-<span id="cb3-15"><a href="#cb3-15"></a>rf_pipe <span class="op">=</span> pipeline.Pipeline([(<span class="st">'ordinal_encoder'</span>,oe), (<span class="st">'random_forest'</span>, rf)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a>np.random.RandomState(<span class="dv">500</span>)</span>
+<span id="cb3-5"><a href="#cb3-5"></a>raw <span class="op">=</span> pd.read_csv(<span class="st">'https://bit.ly/3sWty5A'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6"></a>df <span class="op">=</span> raw[[<span class="st">"like_count"</span>, <span class="st">"funny"</span>, <span class="st">"show_product_quickly"</span>, <span class="op">\</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>    <span class="st">"celebrity"</span>, <span class="st">"danger"</span>, <span class="st">"animals"</span>]].dropna()</span>
+<span id="cb3-8"><a href="#cb3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="im">from</span> sklearn <span class="im">import</span> model_selection, preprocessing, ensemble</span>
+<span id="cb3-10"><a href="#cb3-10"></a></span>
+<span id="cb3-11"><a href="#cb3-11"></a>X_train, X_test, y_train, y_test <span class="op">=</span> model_selection.train_test_split(</span>
+<span id="cb3-12"><a href="#cb3-12"></a>    df.drop(columns <span class="op">=</span> [<span class="st">'like_count'</span>]),</span>
+<span id="cb3-13"><a href="#cb3-13"></a>    df[<span class="st">'like_count'</span>],</span>
+<span id="cb3-14"><a href="#cb3-14"></a>    test_size<span class="op">=</span><span class="fl">0.2</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a>)</span>
+<span id="cb3-16"><a href="#cb3-16"></a>oe <span class="op">=</span> preprocessing.OrdinalEncoder().fit(X_train)</span>
+<span id="cb3-17"><a href="#cb3-17"></a>rf <span class="op">=</span> ensemble.RandomForestRegressor().fit(oe.transform(X_train), y_train)</span>
+<span id="cb3-18"><a href="#cb3-18"></a>rf_pipe <span class="op">=</span> pipeline.Pipeline([(<span class="st">'ordinal_encoder'</span>,oe), (<span class="st">'random_forest'</span>, rf)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>choose the right feature engineering for the job, and train your model</p>
 <p>put these together in a pipeline</p>
@@ -634,11 +603,8 @@ Isabel Zimmerman, Posit PBC
       }</style></aside>
 </section>
 
-<section id="section-5" class="title-slide slide level1 center">
+<section id="section-7" class="title-slide slide level1 center">
 <h1></h1>
-<div class="r-fit-text">
-<p>if you develop models…</p>
-</div>
 <aside class="notes">
 <p>then i got to my first job and realized there’s more to think about than splitting test/training/etc you need to figure out how to share this model with teammates in a way that DOESNT include emailing your model to other people, you need to integrate it into some larger application (am i going to write this IN MY SHINY APP?), you need to ensure that it still performs well a week from now, or a month from now</p>
 <p>you start to realize that these practices are not always enough!</p>
@@ -655,13 +621,12 @@ Isabel Zimmerman, Posit PBC
       }</style></aside>
 </section>
 
-<section id="section-6" class="title-slide slide level1 center">
+<section>
+<section id="section-8" class="title-slide slide level1 center">
 <h1></h1>
-<div class="r-fit-text">
-<p><em>you probably should operationalize them</em></p>
-</div>
-<aside class="notes">
-<p>the business values of models generally</p>
+
+<img data-src="https://github.com/isabelizimm/pydata-nyc2022/blob/main/images/ml_ops_cycle.png?raw=true" class="r-stretch"><aside class="notes">
+
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -674,17 +639,10 @@ Isabel Zimmerman, Posit PBC
           display:block!important;
       }</style></aside>
 </section>
+<section id="what-are-all-the-pieces-needed-for-mlops" class="slide level2">
+<h2>what are all the pieces needed for mlops?</h2>
 
-<section id="section-7" class="title-slide slide level1 center">
-<h1></h1>
-
-<img data-src="https://github.com/isabelizimm/pydata-nyc2022/blob/main/images/ml_ops_cycle.png?raw=true" class="r-stretch"></section>
-
-<section id="what-are-all-the-pieces-needed-for-mlops" class="title-slide slide level1 center">
-<h1>what are all the pieces needed for mlops?</h1>
-
-<img data-src="https://46eybw2v1nh52oe80d3bi91u-wpengine.netdna-ssl.com/wp-content/uploads/2021/12/Data-and-AI-Landscape-2021-v3-small-1024x530.jpg" class="r-stretch quarto-figure-center"></section>
-
+<img data-src="https://46eybw2v1nh52oe80d3bi91u-wpengine.netdna-ssl.com/wp-content/uploads/2021/12/Data-and-AI-Landscape-2021-v3-small-1024x530.jpg" class="r-stretch quarto-figure-center"></section></section>
 <section>
 <section id="versioning" class="title-slide slide level1 center">
 <h1>versioning</h1>
@@ -719,6 +677,7 @@ Isabel Zimmerman, Posit PBC
 <aside class="notes">
 <p>versioning your model is the foundation for success in machine learning deployments…</p>
 <p>we can already see here this is not going to scale for ONE MODEL lacks context</p>
+<p>it would be nice if my models: - lived in a central location - were discoverable by my team - loaded right into memory</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -731,61 +690,59 @@ Isabel Zimmerman, Posit PBC
           display:block!important;
       }</style></aside>
 </div>
-</section>
-<section id="versioning-2" class="slide level2">
-<h2>versioning</h2>
-<div>
-<ul>
-<li class="fragment">living in a central location</li>
-<li class="fragment">discoverable by team</li>
-<li class="fragment">load right into memory</li>
-</ul>
-</div>
 </section></section>
-<section id="section-8" class="title-slide slide level1 center">
+<section id="section-9" class="title-slide slide level1 center" data-background-iframe="logo-fall/index.html">
 <h1></h1>
 
 <img data-src="https://github.com/isabelizimm/pydata-nyc2022/blob/main/images/pinshex.png?raw=true" class="r-stretch quarto-figure-center"></section>
 
-<section id="section-9" class="title-slide slide level1 center">
+<section id="section-10" class="title-slide slide level1 center">
 <h1></h1>
 <div class="sourceCode" id="cb4" data-code-line-numbers="4-5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> pins</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="im">from</span> vetiver <span class="im">import</span> VetiverModel, vetiver_pin_write</span>
-<span id="cb4-3"><a href="#cb4-3"></a>model_board <span class="op">=</span> pins.board_temp( <span class="co"># create place for models to be stored</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>    allow_pickle_read <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb4-5"><a href="#cb4-5"></a>v <span class="op">=</span> VetiverModel(rf_pipe, <span class="st">"ads"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-
-<section id="section-10" class="title-slide slide level1 center">
-<h1></h1>
-<div class="sourceCode" id="cb5" data-code-line-numbers="4-5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> pins</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="im">from</span> vetiver <span class="im">import</span> VetiverModel, vetiver_pin_write</span>
-<span id="cb5-3"><a href="#cb5-3"></a>model_board <span class="op">=</span> pins.board_temp( <span class="co"># can also be s3, azure, gcs, connect</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>    allow_pickle_read <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb5-5"><a href="#cb5-5"></a>v <span class="op">=</span> VetiverModel(rf_pipe, <span class="st">"ads"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a>model_board <span class="op">=</span> pins.board_temp( <span class="co"># create place for models to be stored</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>    allow_pickle_read <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a>v <span class="op">=</span> VetiverModel(rf_pipe, <span class="st">"ads"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 
 <section id="section-11" class="title-slide slide level1 center">
 <h1></h1>
-<div class="sourceCode" id="cb6" data-code-line-numbers="7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> pins</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="im">from</span> vetiver <span class="im">import</span> VetiverModel, vetiver_pin_write</span>
-<span id="cb6-3"><a href="#cb6-3"></a>model_board <span class="op">=</span> pins.board_temp( <span class="co"># create place for models to be stored</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>    allow_pickle_read <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb6-5"><a href="#cb6-5"></a>v <span class="op">=</span> VetiverModel(rf_pipe, <span class="st">"ads"</span>) <span class="co"># create deployable model object</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5" data-code-line-numbers="4-5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> pins</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="im">from</span> vetiver <span class="im">import</span> VetiverModel, vetiver_pin_write</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a>model_board <span class="op">=</span> pins.board_temp( <span class="co"># can also be s3, azure, gcs, connect</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>    allow_pickle_read <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a>v <span class="op">=</span> VetiverModel(rf_pipe, <span class="st">"ads"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 
 <section id="section-12" class="title-slide slide level1 center">
 <h1></h1>
+<div class="sourceCode" id="cb6" data-code-line-numbers="7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> pins</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="im">from</span> vetiver <span class="im">import</span> VetiverModel, vetiver_pin_write</span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a>model_board <span class="op">=</span> pins.board_temp( <span class="co"># create place for models to be stored</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>    allow_pickle_read <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a>v <span class="op">=</span> VetiverModel(rf_pipe, <span class="st">"ads"</span>) <span class="co"># create deployable model object</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+
+<section id="section-13" class="title-slide slide level1 center">
+<h1></h1>
 <div class="sourceCode" id="cb7" data-code-line-numbers="8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> pins</span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="im">from</span> vetiver <span class="im">import</span> VetiverModel, vetiver_pin_write</span>
-<span id="cb7-3"><a href="#cb7-3"></a>model_board <span class="op">=</span> pins.board_temp( <span class="co"># create place for models to be stored</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>    allow_pickle_read <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb7-5"><a href="#cb7-5"></a>v <span class="op">=</span> VetiverModel(rf_pipe, <span class="st">"ads"</span>) <span class="co"># create deployable model object</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a>vetiver_pin_write(model_board, v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a>model_board <span class="op">=</span> pins.board_temp( <span class="co"># create place for models to be stored</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>    allow_pickle_read <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a>v <span class="op">=</span> VetiverModel(rf_pipe, <span class="st">"ads"</span>) <span class="co"># create deployable model object</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>vetiver_pin_write(model_board, v)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 
 <section>
-<section id="section-13" class="title-slide slide level1 center">
+<section id="section-14" class="title-slide slide level1 center">
 <h1></h1>
 <div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>Meta(title<span class="op">=</span><span class="st">'ads: a pinned Pipeline object'</span>,</span>
 <span id="cb8-2"><a href="#cb8-2"></a>    description<span class="op">=</span><span class="st">"Scikit-learn &lt;class 'sklearn.pipeline.Pipeline'&gt; model"</span>, </span>
@@ -819,14 +776,16 @@ Isabel Zimmerman, Posit PBC
       }</style></aside>
 </section></section>
 <section>
-<section id="section-14" class="title-slide slide level1 center">
+<section id="section-15" class="title-slide slide level1 center">
 <h1></h1>
 <div class="sourceCode" id="cb9" data-code-line-numbers="7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> pins</span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="im">from</span> vetiver <span class="im">import</span> VetiverModel, vetiver_pin_write</span>
-<span id="cb9-3"><a href="#cb9-3"></a>model_board <span class="op">=</span> pins.board_temp(</span>
-<span id="cb9-4"><a href="#cb9-4"></a>    allow_pickle_read <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb9-5"><a href="#cb9-5"></a>v <span class="op">=</span> VetiverModel(rf, <span class="st">"ads"</span>, ptype_data <span class="op">=</span> X_train)</span>
-<span id="cb9-6"><a href="#cb9-6"></a>vetiver_pin_write(model_board, rf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-3"><a href="#cb9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4"></a>model_board <span class="op">=</span> pins.board_temp(</span>
+<span id="cb9-5"><a href="#cb9-5"></a>    allow_pickle_read <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb9-6"><a href="#cb9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7"></a>v <span class="op">=</span> VetiverModel(rf, <span class="st">"ads"</span>, ptype_data <span class="op">=</span> X_train)</span>
+<span id="cb9-8"><a href="#cb9-8"></a>vetiver_pin_write(model_board, rf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="utilizing-model-cards" class="slide level2">
 <h2>utilizing model cards</h2>
@@ -880,12 +839,7 @@ Isabel Zimmerman, Posit PBC
 
 <img data-src="https://github.com/isabelizimm/pydata-nyc2022/blob/main/images/ethics.png?raw=true" class="r-stretch"><aside class="notes">
 <p>my model doesn’t have any ethical challenges, it’s predicting youtube likes</p>
-<ul>
-<li><p>Also, consider the possibility of gathering feedback from those impacted by the machine learning system, especially those with marginalized identities.</p></li>
-<li><p>However, we strongly advise that instead of deleting any such section because you have incomplete or imprecise information, you note your own process and considerations.</p></li>
-</ul>
-<p>The process of documenting the extent and limits of a machine learning system is part of transparent, responsible reporting.</p>
-<p>ultimately the extent of its value depends on you</p>
+<p>instead of deleting any such section because you have incomplete or imprecise information, you note your own process and considerations.</p>
 <p>actually, my dad has a quote that he always tells me–“if you haven’t written it down, you haven’t thought it out”</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -900,7 +854,7 @@ Isabel Zimmerman, Posit PBC
       }</style></aside>
 </section></section>
 <section>
-<section id="section-15" class="title-slide slide level1 center">
+<section id="section-16" class="title-slide slide level1 center">
 <h1></h1>
 
 <img data-src="https://github.com/isabelizimm/pydata-nyc2022/blob/main/images/mlops_version.jpg?raw=true" class="r-stretch"></section>
@@ -940,8 +894,14 @@ Isabel Zimmerman, Posit PBC
 <span id="cb14-4"><a href="#cb14-4"></a>    pin_name <span class="op">=</span> <span class="st">"ads"</span>, </span>
 <span id="cb14-5"><a href="#cb14-5"></a>    version <span class="op">=</span> <span class="st">"59869"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
+<section id="section-17" class="title-slide slide level1 center">
+<h1></h1>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>vetiver.write_app(board<span class="op">=</span>board, pin_name<span class="op">=</span><span class="st">"ads"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2"></a>vetiver.write_docker(app_file<span class="op">=</span><span class="st">"app.py"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+
 <section>
-<section id="section-16" class="title-slide slide level1 center">
+<section id="section-18" class="title-slide slide level1 center">
 <h1></h1>
 
 <img data-src="https://github.com/isabelizimm/pydata-nyc2022/blob/main/images/mlops_deploy.jpg?raw=true" class="r-stretch"></section>
@@ -966,21 +926,23 @@ Isabel Zimmerman, Posit PBC
 </section>
 <section id="monitoring-1" class="slide level2">
 <h2>monitoring</h2>
-<div class="sourceCode" id="cb15" data-code-line-numbers="1,10,17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>metrics <span class="op">=</span> vetiver.compute_metrics(</span>
-<span id="cb15-2"><a href="#cb15-2"></a>    new_data, </span>
-<span id="cb15-3"><a href="#cb15-3"></a>    <span class="st">"date"</span>, </span>
-<span id="cb15-4"><a href="#cb15-4"></a>    timedelta(weeks <span class="op">=</span> <span class="dv">1</span>), </span>
-<span id="cb15-5"><a href="#cb15-5"></a>    [mean_absolute_error, r2_score], </span>
-<span id="cb15-6"><a href="#cb15-6"></a>    <span class="st">"like_count"</span>, </span>
-<span id="cb15-7"><a href="#cb15-7"></a>    <span class="st">"y_pred"</span></span>
-<span id="cb15-8"><a href="#cb15-8"></a>    )</span>
-<span id="cb15-9"><a href="#cb15-9"></a>vetiver.pin_metrics(</span>
-<span id="cb15-10"><a href="#cb15-10"></a>    model_board, </span>
-<span id="cb15-11"><a href="#cb15-11"></a>    metrics, </span>
-<span id="cb15-12"><a href="#cb15-12"></a>    <span class="st">"metrics_pin_name"</span>, </span>
-<span id="cb15-13"><a href="#cb15-13"></a>    overwrite <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb15-14"><a href="#cb15-14"></a>    )</span>
-<span id="cb15-15"><a href="#cb15-15"></a>vetiver.plot_metrics(metrics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16" data-code-line-numbers="1,10,17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>metrics <span class="op">=</span> vetiver.compute_metrics(</span>
+<span id="cb16-2"><a href="#cb16-2"></a>    new_data, </span>
+<span id="cb16-3"><a href="#cb16-3"></a>    <span class="st">"date"</span>, </span>
+<span id="cb16-4"><a href="#cb16-4"></a>    timedelta(weeks <span class="op">=</span> <span class="dv">1</span>), </span>
+<span id="cb16-5"><a href="#cb16-5"></a>    [mean_absolute_error, r2_score], </span>
+<span id="cb16-6"><a href="#cb16-6"></a>    <span class="st">"like_count"</span>, </span>
+<span id="cb16-7"><a href="#cb16-7"></a>    <span class="st">"y_pred"</span></span>
+<span id="cb16-8"><a href="#cb16-8"></a>    )</span>
+<span id="cb16-9"><a href="#cb16-9"></a></span>
+<span id="cb16-10"><a href="#cb16-10"></a>vetiver.pin_metrics(</span>
+<span id="cb16-11"><a href="#cb16-11"></a>    model_board, </span>
+<span id="cb16-12"><a href="#cb16-12"></a>    metrics, </span>
+<span id="cb16-13"><a href="#cb16-13"></a>    <span class="st">"metrics_pin_name"</span>, </span>
+<span id="cb16-14"><a href="#cb16-14"></a>    overwrite <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb16-15"><a href="#cb16-15"></a>    )</span>
+<span id="cb16-16"><a href="#cb16-16"></a>    </span>
+<span id="cb16-17"><a href="#cb16-17"></a>vetiver.plot_metrics(metrics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>we won’t look super deep at these functions right, but</p>
 <style type="text/css">
@@ -1016,42 +978,28 @@ Isabel Zimmerman, Posit PBC
       }</style></aside>
 </section></section>
 <section>
-<section id="section-17" class="title-slide slide level1 center">
+<section id="section-19" class="title-slide slide level1 center">
 <h1></h1>
 
 <img data-src="https://github.com/isabelizimm/pydata-nyc2022/blob/main/images/mlops_monitor.jpg?raw=true" class="r-stretch"></section>
-<section id="composability" class="slide level2">
-<h2>composability</h2>
-<div class="fragment">
+<section id="why-should-i-be-excited-about-vetiver" class="slide level2">
+<h2>Why should I be excited about vetiver?</h2>
+<p>Composability</p>
 <ul>
-<li>VetiverModel</li>
-<li>VetiverAPI</li>
+<li>Internally, with <code>VetiverAPI</code> and <code>VetiverModel</code></li>
+<li>Externally, leveraging the tools vetiver is built on</li>
 </ul>
-<aside class="notes">
-<p>because it’s pretty</p>
-<p>few simple tools that you are able to compose together to make complex objects</p>
-<p>since vetiverapi is built on fastapi, can build out to be quite complex also has methods to add other POST endpoints</p>
-<p>also is composable with other tools to build out a custom framework that works well for your team</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="ergonomics" class="slide level2">
-<h2>ergonomics</h2>
+<div class="fragment">
+<p>Ergonomics</p>
 <ul>
 <li>feels good to use</li>
 <li>works with the tools you like</li>
 </ul>
 <aside class="notes">
+<p>few simple tools that you are able to compose together to make complex objects</p>
+<p>since vetiverapi is built on fastapi, can build out to be quite complex also has methods to add other POST endpoints</p>
+<p>also is composable with other tools to build out a custom framework that works well for your team</p>
+<hr>
 <p>one thing vetiver has worked really hard on is to lower the barrier to entry on deploying models, making this feel like a natural extension of your current data science workflow</p>
 <p>you are still able to use the tools you want</p>
 <p>also with leveraging pins, it makes it easy to move data between R and Python at places where this is possible</p>
@@ -1066,6 +1014,7 @@ Isabel Zimmerman, Posit PBC
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</div>
 </section>
 <section id="vetiver.rstudio.com" class="slide level2">
 <h2>vetiver.rstudio.com</h2>
